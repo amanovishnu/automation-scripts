@@ -1,0 +1,2 @@
+# Ignoring the keys directory as it may contains sensitive information
+keys/
