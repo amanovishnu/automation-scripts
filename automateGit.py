@@ -1,3 +1,3 @@
-import masterKey
-print(masterKey.name)
-print(masterKey.password)
+from keys import masterKey
+print(masterKey.githubEmail)
+print(masterKey.githubPassword)
