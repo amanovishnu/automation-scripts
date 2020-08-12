@@ -8,14 +8,3 @@ echo '============= sudo apt autoremove; ===================='
 sudo apt autoremove;
 echo '============== sudo apt install git ==================='
 sudo apt install git;
-
-
-
-
-
-
-
-
-4/zAEsnXaLBNVEKhCLMjgcywL9cfSeWACt2KXZ85K2sCwyPkkDOBxXtPg
-
-4/zgHvESQP3MjNZz75QeoYwQBq2ft4vbKHOHSY2AXCXviPw-nKjxf-lbE
