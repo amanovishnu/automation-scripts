@@ -53,7 +53,7 @@ echo '============== INSTALLING POSTMAN ==================='
 sudo apt install snapd -y
 sudo snap install postman
 
-
-
+echo '============== INSTALLING VLC MEDIA PLAYER ==================='
+sudo snap install vlc
 
 
