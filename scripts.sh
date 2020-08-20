@@ -10,10 +10,8 @@ echo '============== sudo apt clean; ==================='
 sudo apt clean -y;
 
 
-
 echo '============= sudo apt autoremove; ===================='
 sudo apt autoremove -y;
-
 
 
 echo '============== sudo apt install git ==================='
@@ -53,7 +51,13 @@ echo '============== INSTALLING POSTMAN ==================='
 sudo apt install snapd -y
 sudo snap install postman
 
+
 echo '============== INSTALLING VLC MEDIA PLAYER ==================='
 sudo snap install vlc
+
+
+echo '============== INSTALLING GNOME TWEAK TOOL ==================='
+sudo add-apt-repository universe
+sudo apt install gnome-tweak-tool -y
 
 
