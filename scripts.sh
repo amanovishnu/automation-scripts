@@ -60,4 +60,8 @@ echo '============== INSTALLING GNOME TWEAK TOOL ==================='
 sudo add-apt-repository universe
 sudo apt install gnome-tweak-tool -y
 
+echo '============== INSTALLING STICKY NOTES ==================='
+sudo add-apt-repository ppa:umang/indicator-stickynotes
+sudo apt-get update
+sudo apt-get install indicator-stickynotes
 
