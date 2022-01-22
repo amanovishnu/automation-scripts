@@ -1,22 +1,10 @@
 echo '================= sudo apt update; ================'
 sudo apt update -y;
-
-
-echo '================= sudo apt full-upgrade; ================'
 sudo apt full-upgrade -y;
-
-
-echo '============== sudo apt clean; ==================='
 sudo apt clean -y;
-
-
-echo '============= sudo apt autoremove; ===================='
 sudo apt autoremove -y;
 
-
-echo '============== sudo apt install git ==================='
-sudo apt install git;
-
+sudo apt install git -y;
 
 echo '============== INSTALLING BRAVE BROWSER ==================='
 sudo apt install apt-transport-https curl
@@ -25,16 +13,13 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable ma
 sudo apt update -y
 sudo apt install brave-browser -y
 
-
 echo '============== INSTALLING GUAKE TERMINAL ==================='
 sudo apt-get update -y
 sudo apt-get install guake -y
 guake --version
 
-
 echo '============== INSTALLING SYNAPSE ==================='
 sudo apt-get install synapse
-
 
 echo '============== INSTALLING VISUAL STUIO CODE ==================='
 sudo apt update -y
@@ -46,15 +31,12 @@ sudo apt install code
 sudo apt update -y
 sudo apt upgrade -y
 
-
 echo '============== INSTALLING POSTMAN ==================='
 sudo apt install snapd -y
 sudo snap install postman
 
-
 echo '============== INSTALLING VLC MEDIA PLAYER ==================='
 sudo snap install vlc
-
 
 echo '============== INSTALLING GNOME TWEAK TOOL ==================='
 sudo add-apt-repository universe
@@ -64,4 +46,3 @@ echo '============== INSTALLING STICKY NOTES ==================='
 sudo add-apt-repository ppa:umang/indicator-stickynotes
 sudo apt-get update
 sudo apt-get install indicator-stickynotes
-

@@ -42,9 +42,9 @@ unzip emqx-ubuntu18.04-v3.1.2.zip
 echo "-------------------------------------------------------------------------"
 
 
- echo "-----------------INSTALLING SSH--------------------------------"
- sudo apt-get -y install openssh-server
- echo "-------------------------------------------------------------------------"
+echo "-----------------INSTALLING SSH--------------------------------"
+sudo apt-get -y install openssh-server
+echo "-------------------------------------------------------------------------"
 
 echo "-----------------INSTALLING PYTHON-PIP--------------------------------"
 sudo apt-get -y install python-pip
@@ -63,17 +63,6 @@ echo "-------------------------------------------------------------------------"
 
 echo "-----------------INSTALLING PHP-MYSQL CONNECTORS--------------------------------"
 sudo apt-get -y  install php-mysql php-common php-cli
-echo "-------------------------------------------------------------------------"
-
-
-echo "-----------------INSTALLING PANDAS LIBRARY--------------------------------"
-sudo pip install pandas==0.19.2
-echo "-------------------------------------------------------------------------"
-
-
-echo "-----------------SETTING UP SOFTWARE--------------------------------"
-cd /var/www/html/
-sudo git clone -b $GIT_BRANCH --single-branch https://parag_2306@bitbucket.org/itspe-software/tis.git
 echo "-------------------------------------------------------------------------"
 
 
