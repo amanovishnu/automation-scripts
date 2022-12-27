@@ -19,6 +19,6 @@ bash <path_to_saved_file>/Anaconda3-2020.02-Linux-x86_64.sh
 source ~/.bashrc
 anaconda-navigator
 
-# Replace <path_to_saved_file> with . to download the file to current directory
+# Replace <path_to_saved_file> with . to download the file to current directory (pwd)
 # Reference: https://docs.anaconda.com/anaconda/install/linux/ (Official Guide)
 # Reference : https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-20-04/
