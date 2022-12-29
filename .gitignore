@@ -1,6 +1,0 @@
-
-#ignoring vscode settings file
-.vscode
-
-#ignoring complete keys folder due to sensitive information
-keys/*
