@@ -1,29 +1,42 @@
+#!/bin/bash
+
 # Reference: https://docs.anaconda.com/anaconda/install/linux/ (Official Guide)
-# Reference : https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-20-04/
+# Author: MANOVISHNU ADEPU (geekymano@gmail.com)
+# Last Updated: 2023/10/25
 
-# Author: Mano Vishnu (geekymano@gmail.com)
-# Last Updated: 2022/12/27
+# Usage: bash install-anaconda.sh [path_to_download_setup_file]
+# If no path is provided, the current working directory (pwd) will be used as the default.
 
-# command to execute: bash anaconda_installation.sh <path_to_execute_setup_file>
+# Check if a download path is provided, otherwise use the current working directory
+if [ -z "$1" ]; then
+    echo "No download path provided. Using the current working directory."
+    DOWNLOAD_PATH=$(pwd)
+else
+    DOWNLOAD_PATH=$1
+fi
+
+ANACONDA_URL="https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh"
+ANACONDA_INSTALLER="$DOWNLOAD_PATH/$(basename $ANACONDA_URL)"
 
 echo '-------------------------------------- Prerequisites for Installing Anaconda --------------------------------------'
-sudo apt update -y;
-sudo apt full-upgrade -y;
-sudo apt autoremove -y;
-sudo apt clean -y;
+sudo apt update -y
+sudo apt full-upgrade -y
+sudo apt autoremove -y
+sudo apt clean -y
 
 echo '----------------------- Installing Anaconda Navigator Dependencies -----------------------------'
-sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+sudo apt install -y libgl1-mesa-glx libegl1-mesa libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
 
 echo '----------------------- Downloading Anaconda Setup file -----------------------------'
-wget -P $1 https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+wget -P "$DOWNLOAD_PATH" "$ANACONDA_URL"
 
 echo '----------------------- Verifying Anaconda Setup file -----------------------------'
-sha256sum $1/Anaconda3-2020.02-Linux-x86_64.sh
+sha256sum "$ANACONDA_INSTALLER"
 
 echo '----------------------- Executing Anaconda Setup file -----------------------------'
-bash $1/Anaconda3-2020.02-Linux-x86_64.sh
+bash "$ANACONDA_INSTALLER"
 
-echo '----------------------- Updating bashrc file & Starting anaconda-navigator'
+echo '----------------------- Updating bashrc file -----------------------------'
 source ~/.bashrc
-anaconda-navigator
+
+echo 'Installation complete. Please restart your terminal or run `source ~/.bashrc` to initialize Anaconda.'
