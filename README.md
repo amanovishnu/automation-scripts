@@ -1,1 +1,3 @@
 # Automation-Scripts
+
+This repository contains a collection of automation scripts designed to streamline the setup and configuration of various software and services on Debian and Fedora systems. The scripts cover tasks such as installing Anaconda and Miniconda, setting up web and database servers, and configuring development environments. Each script is tailored to handle specific installation and configuration steps, ensuring a smooth and efficient setup process.
